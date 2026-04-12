@@ -1,1 +1,292 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  background: #ffffff;
+  position: relative;
+  overflow-x: hidden;
+}
 
+/* Soft dotted/speckled background */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(rgba(0,0,0,0.06) 1px, transparent 1px);
+  background-size: 12px 12px;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Hero */
+.hero {
+  background-color: #0d1b4c;
+  color: white;
+  padding: 8rem 1rem 1rem 1rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: height 0.8s ease, padding 0.8s ease;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+/* Video background */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.hero-logo,
+#hero-title,
+#hero-subtitle {
+  position: relative;
+  z-index: 1;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+.hero-logo {
+  max-width: 100px;
+  margin: 0 auto 0.5rem auto;
+  opacity: 0;
+  animation: logoFadeIn 2s forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes logoFadeIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+#hero-title {
+  margin: 0;
+  font-size: 4rem;
+  opacity: 0;
+  animation: fadeLoop 5.75s infinite;
+}
+
+@keyframes fadeLoop {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  50% { opacity: 1; }
+  65% { opacity: 0; }
+  67% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+#hero-subtitle {
+  opacity: 0;
+  font-style: italic;
+  margin-top: 0.5rem;
+  animation: subtitleFade 2s forwards;
+  animation-delay: 1s;
+}
+
+@keyframes subtitleFade {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem 0;
+  color: black;
+  position: relative;
+  z-index: 1;
+}
+
+.container img:first-of-type {
+  max-width: 80%;
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.6rem;
+  border-radius: 6px;
+}
+
+iframe {
+  aspect-ratio: 16/9;
+  max-width: 70%;
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+p {
+  line-height: 1.8;
+  margin: 1.5rem 0;
+}
+
+.italic-center {
+  font-style: italic;
+  margin: 0.8rem 0;
+}
+
+.text-center {
+  margin: 1.5rem 0;
+}
+
+/* Buttons */
+.wide-button, .short-button {
+  display: inline-block;
+  padding: 1rem 0;
+  margin: 1rem 0.5rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wide-button { width: 68%; background: linear-gradient(90deg, #0d1b4c, #4a90e2); }
+.short-button { width: 35%; background-color: #4a90e2; }
+
+.wide-button:hover, .short-button:hover { transform: translateY(-3px); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+
+.bottom-buttons { display:flex; justify-content:center; flex-wrap:wrap; margin-bottom: 3rem; }
+.footer-text { font-size: 0.85rem; margin-bottom: 2rem; }
+
+/* Poem container */
+.poem-container {
+  font-family: 'Edu NSW ACT Cursive', cursive;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  margin: 3rem 0;
+  text-align: center;
+  color: #333;
+}
+
+.poem-container .poem-spacer { height: 2rem; }
+
+.poem-container .poem-line {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+.poem-container .poem-line.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  #hero-title { font-size: 2.5rem; }
+  #hero-subtitle { font-size: 1rem; }
+  .container { width: 95%; padding: 1rem 0; }
+  iframe { max-width: 100%; }
+  .container img:first-of-type { max-width: 90%; }
+  .poem-container { font-size: 1.4rem; }
+}
+
+/* Shake animation keyframes */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  10% { transform: translateX(-4px); }
+  20% { transform: translateX(4px); }
+  30% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  50% { transform: translateX(-2px); }
+  60% { transform: translateX(2px); }
+  70% { transform: translateX(-1px); }
+  80% { transform: translateX(1px); }
+  90% { transform: translateX(0); }
+  100% { transform: translateX(0); }
+}
+
+/* Apply shake on hover or active */
+.main-cta:hover,
+.main-cta:active {
+  animation: shake 0.5s;
+}
+
+/* Animated cursive H1 */
+.animated-cursive {
+  font-family: 'Edu NSW ACT Cursive', cursive;
+  font-size: 2.5rem;
+  display: block;
+  max-width: 100%;
+  white-space: normal;
+  overflow: hidden;
+  border-right: 3px solid rgba(0,0,0,0.8);
+  margin: 0 auto 2rem auto;
+  animation: typing 4s steps(60, end), blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Three images row */
+.three-images-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 3rem auto;
+  max-width: 1000px;
+  width: 90%;
+}
+
+.three-images-section .three-img {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* forces consistent box shape */
+  object-fit: contain;   /* preserve image proportions */
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.three-images-section .three-img:hover {
+  transform: scale(1.05);
+}
+
+.three-images-text {
+  max-width: 900px;
+  margin: 2rem auto 3rem auto;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  border: 1px solid #aaa;
+  padding: 1.2rem 1rem;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+
+/* Responsive stacking for smaller screens */
+@media (max-width: 768px) {
+  .three-images-section {
+    grid-template-columns: 1fr;
+  }
+  .three-images-section .three-img {
+    aspect-ratio: auto; /* let height adjust naturally on mobile */
+  }
+}
