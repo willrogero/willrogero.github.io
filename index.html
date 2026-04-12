@@ -17,7 +17,9 @@
             scroll-behavior: smooth;
         }
 
-        /* CTA BUTTON */
+        /* =========================
+           CTA BUTTON
+        ========================== */
         .cta-btn {
             display:inline-block;
             margin-top:25px;
@@ -41,7 +43,9 @@
             transform: scale(0.98);
         }
 
-        /* LINKEDIN */
+        /* =========================
+           LINKEDIN
+        ========================== */
         .social-link {
             font-size: 1.6rem;
             color: #111;
@@ -59,39 +63,52 @@
             transform: scale(0.92);
         }
 
-        /* GRID (4 columns fixed for even rows) */
+        /* =========================
+           PORTFOLIO GRID (3 PER ROW)
+           CLEAN + CENTERED + SPACED
+        ========================== */
         .grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 16px;
-            margin-top: 30px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px; /* more breathing room */
+            margin-top: 40px;
+            justify-items: center; /* centers last row items */
         }
 
-        @media (max-width: 1000px) {
-            .grid { grid-template-columns: repeat(2, 1fr); }
+        @media (max-width: 900px) {
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         @media (max-width: 600px) {
-            .grid { grid-template-columns: repeat(1, 1fr); }
+            .grid {
+                grid-template-columns: repeat(1, 1fr);
+            }
         }
 
+        /* SQUARE TILE */
         .grid a {
-            display:block;
-            overflow:hidden;
-            border-radius:10px;
+            width: 100%;
+            aspect-ratio: 1 / 1;   /* PERFECT SQUARE */
+            overflow: hidden;
+            border-radius: 12px;
+            display: block;
+            position: relative;
         }
 
+        /* IMAGE CENTER CROPPED (NO WARPING) */
         .grid img {
-            width:100%;
-            height:100%;
-            object-fit:cover;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* key fix */
             display:block;
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .grid a:hover img {
-            transform: scale(1.04);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            transform: scale(1.06);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.25);
         }
 
         .grid a:active img {
@@ -130,7 +147,7 @@
     </section>
 
     <!-- PORTFOLIO -->
-    <section id="portfolio" style="padding:60px 20px; text-align:center;">
+    <section id="portfolio" style="padding:70px 30px; text-align:center;">
         <h2>Portfolio</h2>
 
         <div class="grid">
