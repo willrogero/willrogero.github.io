@@ -1,9 +1,36 @@
-/*
-	Story by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+<script>
+const music = document.getElementById("bgMusic");
+const btn = document.getElementById("musicBtn");
 
+// toggle play/pause
+let isPlaying = false;
+
+btn.addEventListener("click", () => {
+    if (!isPlaying) {
+        music.play();
+        btn.innerHTML = "🎵 Pause";
+        isPlaying = true;
+    } else {
+        music.pause();
+        btn.innerHTML = "🎵 Music";
+        isPlaying = false;
+    }
+});
+
+// hide button halfway down page
+window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const triggerPoint = window.innerHeight * 1.2; // ~half page
+
+    if (scrollY > triggerPoint) {
+        btn.style.opacity = "0";
+        btn.style.pointerEvents = "none";
+    } else {
+        btn.style.opacity = "1";
+        btn.style.pointerEvents = "auto";
+    }
+});
+</script>
 (function($) {
 
 	var	$window = $(window),
