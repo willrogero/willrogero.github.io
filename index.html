@@ -16,7 +16,6 @@
             scroll-behavior: smooth;
         }
 
-        /* HERO BUTTON */
         .cta-btn {
             display:inline-block;
             margin-top:25px;
@@ -40,7 +39,6 @@
             transform: scale(0.98);
         }
 
-        /* SOCIAL */
         .social-link {
             font-size: 1.6rem;
             color: #111;
@@ -57,7 +55,6 @@
             transform: scale(0.92);
         }
 
-        /* GRID */
         .grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -101,7 +98,6 @@
             object-fit: contain;
         }
 
-        /* MUSIC BUTTON */
         .music-btn {
             position: fixed;
             bottom: 25px;
@@ -164,7 +160,6 @@
 
         <div class="grid">
 
-            <!-- YOUR IMAGES STAY EXACT SAME -->
             <a href="https://willrogero.wordpress.com/wp-content/uploads/2017/04/90-minute-course-method-mcr1.jpg" target="_blank">
                 <img src="https://willrogero.wordpress.com/wp-content/uploads/2017/04/90-minute-course-method-mcr1.jpg">
             </a>
@@ -173,12 +168,17 @@
                 <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/1-1-of-11.jpg">
             </a>
 
-            <!-- (ALL OTHER IMAGES REMAIN EXACTLY AS YOU HAD THEM) -->
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/banner-1.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/banner-1.jpg">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/49_new_patient_copy.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/49_new_patient_copy.jpg">
+            </a>
 
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer style="text-align:center; padding:40px;">
         <a href="https://www.linkedin.com/in/williamrogero/" target="_blank" class="social-link">
             <i class="fa-brands fa-linkedin"></i>
@@ -189,7 +189,7 @@
 
 </div>
 
-<!-- ✅ FIXED MUSIC PATH (THIS WAS YOUR ISSUE) -->
+<!-- MUSIC -->
 <audio id="bgMusic" preload="auto" loop>
     <source src="./Resume-instrumental-song.mp3" type="audio/mpeg">
 </audio>
@@ -201,6 +201,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const music = document.getElementById("bgMusic");
     const btn = document.getElementById("musicBtn");
+
+    music.volume = 0.15; // ✅ 15% volume FIX
 
     let isPlaying = false;
 
@@ -216,7 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 isPlaying = false;
             }
         } catch (e) {
-            alert("Click again (browser audio restriction).");
+            alert("Click again to start audio.");
         }
     });
 
