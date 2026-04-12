@@ -144,3 +144,38 @@ footer {
         font-size: 2.2rem;
     }
 }
+
+/* =========================
+   MUSIC BUTTON (FLOATING)
+========================== */
+.music-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9999;
+
+    padding: 12px 16px;
+    border-radius: 999px;
+
+    background: rgba(0,0,0,0.85);
+    color: #fff;
+
+    border: none;
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    transition: all 0.25s ease;
+}
+
+.music-btn:hover {
+    background: #2f80ff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(47,128,255,0.3);
+}
+
+.music-btn:active {
+    background: #1f5fd1;
+    transform: scale(0.95);
+}
