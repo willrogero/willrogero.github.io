@@ -12,14 +12,25 @@
     <div id="wrapper" class="divided">
 
         <!-- Hero Section -->
-        <section class="banner style1 orient-left content-align-left image-position-right fullscreen">
-            <div class="content">
+        <section class="banner style1 orient-left content-align-left fullscreen" style="position: relative; overflow: hidden;">
+            
+            <!-- Background Video -->
+            <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+                <source src="https://cdn.pixabay.com/video/2023/09/23/181995-867576106_large.mp4" type="video/mp4">
+            </video>
+
+            <!-- White Overlay -->
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255,255,255,0.55); z-index: 1;"></div>
+
+            <!-- Content -->
+            <div class="content" style="position: relative; z-index: 2;">
                 <h1>William Rogero</h1>
                 <p class="major">Creative professional with a strong drive to learn, build, and deliver impactful digital and real-world experiences.</p>
                 <ul class="actions stacked">
                     <li><a href="#portfolio" class="button big wide smooth-scroll-middle">VIEW MY PORTFOLIO AND WORK</a></li>
                 </ul>
             </div>
+
         </section>
 
         <!-- Portfolio Section -->
