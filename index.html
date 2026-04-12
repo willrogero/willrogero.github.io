@@ -4,14 +4,54 @@
     <title>William Rogero</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="william_rogero_clean.css" />
+
+    <!-- FIX: Font Awesome for LinkedIn icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 30px;
+        }
+
+        .grid a {
+            display: block;
+            text-decoration: none;
+        }
+
+        .grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+            display: block;
+        }
+
+        .grid img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        /* LIGHT BLUE CLICK EFFECT */
+        .grid a:active img {
+            filter: brightness(1.2) drop-shadow(0 0 10px rgba(0,150,255,0.7));
+            transform: scale(0.98);
+        }
+    </style>
 </head>
+
 <body>
 
 <div id="wrapper">
 
-    <!-- HERO SECTION (FIXED FULLSCREEN) -->
+    <!-- HERO SECTION -->
     <section style="position:relative; height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; overflow:hidden;">
 
         <!-- Background Video -->
@@ -19,14 +59,20 @@
             <source src="https://cdn.pixabay.com/video/2023/09/23/181995-867576106_large.mp4" type="video/mp4">
         </video>
 
-        <!-- White Overlay -->
+        <!-- Overlay -->
         <div style="position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(255,255,255,0.75); z-index:1;"></div>
 
         <!-- Content -->
         <div style="position:relative; z-index:2; max-width:800px; padding:20px;">
             <h1 style="font-size:3.5rem;">William Rogero</h1>
-            <p style="margin-top:15px;">Creative professional with a strong drive to learn, build, and deliver impactful digital and real-world experiences.</p>
-            <a href="#portfolio" style="display:inline-block; margin-top:25px; padding:12px 24px; background:#111; color:#fff; border-radius:6px; text-decoration:none;">VIEW MY PORTFOLIO AND WORK</a>
+            <p style="margin-top:15px;">
+                Creative professional with a strong drive to learn, build, and deliver impactful digital and real-world experiences.
+            </p>
+
+            <a href="#portfolio"
+               style="display:inline-block; margin-top:25px; padding:12px 24px; background:#111; color:#fff; border-radius:6px; text-decoration:none;">
+                VIEW MY PORTFOLIO AND WORK
+            </a>
         </div>
 
     </section>
@@ -34,24 +80,125 @@
     <!-- PORTFOLIO -->
     <section id="portfolio" style="padding:60px 20px; text-align:center;">
         <h2>Portfolio</h2>
+
         <div class="grid">
-            <!-- images already exist -->
+
+            <a href="https://willrogero.wordpress.com/wp-content/uploads/2017/04/90-minute-course-method-mcr1.jpg" target="_blank">
+                <img src="https://willrogero.wordpress.com/wp-content/uploads/2017/04/90-minute-course-method-mcr1.jpg?w=743&h=366">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/1-1-of-11.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/1-1-of-11.jpg?w=583&h=524">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/banner-1.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/banner-1.jpg?w=613&h=321">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/49_new_patient_copy.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/49_new_patient_copy.jpg?w=481&h=215">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/a.png" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/a.png?w=691&h=425">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/b.png" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/b.png?w=481&h=495">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/mcw-logo-2.png" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/mcw-logo-2.png?w=366&h=366">
+            </a>
+
+            <a href="https://willrogero.wordpress.com/wp-content/uploads/2017/04/nastec-minister-of-defense.png" target="_blank">
+                <img src="https://willrogero.wordpress.com/wp-content/uploads/2017/04/nastec-minister-of-defense.png?w=449&h=581">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/199_1_hour_zoom_teeth.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/199_1_hour_zoom_teeth.jpg?w=1100">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/c1.png" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/c1.png?w=618&h=426">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/wr-digital.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/wr-digital.jpg?w=1100">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/brochure.png" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/brochure.png?w=658&h=516">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/millie-cover.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/millie-cover.jpg?w=1100">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/audi-1-1-of-1.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/audi-1-1-of-1.jpg?w=1100">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/audi-white-1-of-1.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/audi-white-1-of-1.jpg?w=787&h=316">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/page2.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/page2.jpg?w=374&h=484">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/content2.png" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/content2.png?w=571&h=624">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/brochure.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/brochure.jpg?w=317&h=677">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/porsche-1-of-1-2.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/porsche-1-of-1-2.jpg?w=1100">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/wraps-brochure-2.png" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/wraps-brochure-2.png?w=1100">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/tag-license.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/tag-license.jpg?w=1100">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/e.png" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/e.png?w=1100">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/2-1-of-1.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/2-1-of-1.jpg?w=889&h=594">
+            </a>
+
+            <a href="https://willrogero.wordpress.com/wp-content/uploads/2017/04/mcr-flyer.jpg" target="_blank">
+                <img src="https://willrogero.wordpress.com/wp-content/uploads/2017/04/mcr-flyer.jpg">
+            </a>
+
+            <a href="https://willrogero.wordpress.com/wp-content/uploads/2017/04/mcr-landing-page-fall.jpg" target="_blank">
+                <img src="https://willrogero.wordpress.com/wp-content/uploads/2017/04/mcr-landing-page-fall.jpg">
+            </a>
+
         </div>
     </section>
 
-    <!-- FOOTER (CLEAN + LINKEDIN + AUTO YEAR) -->
+    <!-- FOOTER -->
     <footer style="text-align:center; padding:40px 20px;">
         <div style="margin-bottom:10px;">
-            <a href="https://www.linkedin.com/in/williamrogero/" target="_blank" style="font-size:1.5rem;">
-                <i class="fa fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/williamrogero/" target="_blank" style="font-size:1.5rem; color:#111;">
+                <i class="fa-brands fa-linkedin"></i>
             </a>
         </div>
+
         <p>William Rogero © <span id="year"></span></p>
     </footer>
 
 </div>
 
-<!-- AUTO YEAR SCRIPT -->
 <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 </script>
