@@ -1,368 +1,330 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>William Rogero</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="william_rogero_clean.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* HERO BUTTON */
+        .cta-btn {
+            display:inline-block;
+            margin-top:25px;
+            padding:14px 26px;
+            background:#111;
+            color:#fff;
+            border-radius:8px;
+            text-decoration:none;
+            transition: all 0.25s ease;
+            font-weight: 500;
+        }
+
+        .cta-btn:hover {
+            background:#2f80ff;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(47,128,255,0.3);
+        }
+
+        .cta-btn:active {
+            background:#1f5fd1;
+            transform: scale(0.98);
+        }
+
+        /* SOCIAL */
+        .social-link {
+            font-size: 1.6rem;
+            color: #111;
+            transition: all 0.25s ease;
+        }
+
+        .social-link:hover {
+            color:#2f80ff;
+            transform: translateY(-2px);
+        }
+
+        .social-link:active {
+            color:#1f5fd1;
+            transform: scale(0.92);
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 900px) {
+            .grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: repeat(1, 1fr); }
+        }
+
+        .grid a {
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            aspect-ratio: 1 / 1;
+            background: #f5f5f5;
+            border-radius: 14px;
+            padding: 12px;
+            overflow:hidden;
+            text-decoration:none;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .grid a:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+        }
+
+        .grid a:active {
+            transform: scale(0.97);
+        }
+
+        .grid img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* MUSIC BUTTON */
+        .music-btn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 9999;
+
+            padding: 12px 16px;
+            border-radius: 999px;
+
+            background: rgba(0,0,0,0.85);
+            color: #fff;
+            border: none;
+            cursor: pointer;
+
+            font-size: 14px;
+            transition: all 0.25s ease;
+        }
+
+        .music-btn:hover {
+            background:#2f80ff;
+            transform: translateY(-2px);
+        }
+
+        .music-btn:active {
+            background:#1f5fd1;
+            transform: scale(0.95);
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div id="wrapper">
+
+    <!-- HERO -->
+    <section style="position:relative; height:100vh; display:flex; align-items:center; justify-content:center; text-align:center; overflow:hidden;">
+
+        <video autoplay muted loop playsinline style="position:absolute; width:100%; height:100%; object-fit:cover;">
+            <source src="https://cdn.pixabay.com/video/2023/09/23/181995-867576106_large.mp4">
+        </video>
+
+        <div style="position:absolute; width:100%; height:100%; background:rgba(255,255,255,0.75);"></div>
+
+        <div style="position:relative; z-index:2; max-width:800px;">
+            <h1 style="font-size:3.5rem;">William Rogero</h1>
+
+            <p>
+                Creative professional with a strong drive to learn, build, and deliver impactful digital and real-world experiences.
+            </p>
+
+            <a href="#portfolio" class="cta-btn">VIEW MY PORTFOLIO AND WORK</a>
+        </div>
+
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" style="padding:70px 30px; text-align:center;">
+        <h2>Portfolio</h2>
+
+        <div class="grid">
+
+            <a href="https://willrogero.wordpress.com/wp-content/uploads/2017/04/90-minute-course-method-mcr1.jpg" target="_blank">
+                <img src="https://willrogero.wordpress.com/wp-content/uploads/2017/04/90-minute-course-method-mcr1.jpg">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/1-1-of-11.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/1-1-of-11.jpg">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/banner-1.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/banner-1.jpg">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/49_new_patient_copy.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/49_new_patient_copy.jpg">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/a.png" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/a.png">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/b.png" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/b.png">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/mcw-logo-2.png" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/mcw-logo-2.png">
+            </a>
+
+            <a href="https://willrogero.wordpress.com/wp-content/uploads/2017/04/nastec-minister-of-defense.png" target="_blank">
+                <img src="https://willrogero.wordpress.com/wp-content/uploads/2017/04/nastec-minister-of-defense.png">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/199_1_hour_zoom_teeth.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/199_1_hour_zoom_teeth.jpg">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/c1.png" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/c1.png">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/wr-digital.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/wr-digital.jpg">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/brochure.png" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/brochure.png">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/millie-cover.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/millie-cover.jpg">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/audi-1-1-of-1.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/audi-1-1-of-1.jpg">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/audi-white-1-of-1.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/audi-white-1-of-1.jpg">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/page2.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/page2.jpg">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/content2.png" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/content2.png">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/brochure.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/brochure.jpg">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/porsche-1-of-1-2.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/porsche-1-of-1-2.jpg">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/wraps-brochure-2.png" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/wraps-brochure-2.png">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/tag-license.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/tag-license.jpg">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/e.png" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/e.png">
+            </a>
+
+            <a href="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/2-1-of-1.jpg" target="_blank">
+                <img src="https://willandcreations.wordpress.com/wp-content/uploads/2016/05/2-1-of-1.jpg">
+            </a>
+
+            <a href="https://willrogero.wordpress.com/wp-content/uploads/2017/04/mcr-flyer.jpg" target="_blank">
+                <img src="https://willrogero.wordpress.com/wp-content/uploads/2017/04/mcr-flyer.jpg">
+            </a>
+
+            <a href="https://willrogero.wordpress.com/wp-content/uploads/2017/04/mcr-landing-page-fall.jpg" target="_blank">
+                <img src="https://willrogero.wordpress.com/wp-content/uploads/2017/04/mcr-landing-page-fall.jpg">
+            </a>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="text-align:center; padding:40px;">
+        <a href="https://www.linkedin.com/in/williamrogero/" target="_blank" class="social-link">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+        <p>William Rogero © <span id="year"></span></p>
+    </footer>
+
+</div>
+
+<!-- MUSIC -->
+<audio id="bgMusic" loop>
+    <source src="resume-instrumental-song.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicBtn" class="music-btn">🎵 Music</button>
+
 <script>
-const music = document.getElementById("bgMusic");
-const btn = document.getElementById("musicBtn");
+document.addEventListener("DOMContentLoaded", () => {
 
-// toggle play/pause
-let isPlaying = false;
+    const music = document.getElementById("bgMusic");
+    const btn = document.getElementById("musicBtn");
 
-btn.addEventListener("click", () => {
-    if (!isPlaying) {
-        music.play();
-        btn.innerHTML = "🎵 Pause";
-        isPlaying = true;
-    } else {
-        music.pause();
-        btn.innerHTML = "🎵 Music";
-        isPlaying = false;
-    }
-});
+    let isPlaying = false;
 
-// hide button halfway down page
-window.addEventListener("scroll", () => {
-    const scrollY = window.scrollY;
-    const triggerPoint = window.innerHeight * 1.2; // ~half page
+    btn.addEventListener("click", async () => {
+        try {
+            if (!isPlaying) {
+                await music.play();
+                btn.innerHTML = "🎵 Pause";
+                isPlaying = true;
+            } else {
+                music.pause();
+                btn.innerHTML = "🎵 Music";
+                isPlaying = false;
+            }
+        } catch (e) {
+            alert("Click again to start audio (browser restriction).");
+        }
+    });
 
-    if (scrollY > triggerPoint) {
-        btn.style.opacity = "0";
-        btn.style.pointerEvents = "none";
-    } else {
-        btn.style.opacity = "1";
-        btn.style.pointerEvents = "auto";
-    }
+    window.addEventListener("scroll", () => {
+        const trigger = window.innerHeight * 1.2;
+
+        if (window.scrollY > trigger) {
+            btn.style.opacity = "0";
+            btn.style.pointerEvents = "none";
+        } else {
+            btn.style.opacity = "1";
+            btn.style.pointerEvents = "auto";
+        }
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
 });
 </script>
-(function($) {
 
-	var	$window = $(window),
-		$body = $('body'),
-		$wrapper = $('#wrapper');
-
-	// Breakpoints.
-		breakpoints({
-			xlarge:   [ '1281px',  '1680px' ],
-			large:    [ '981px',   '1280px' ],
-			medium:   [ '737px',   '980px'  ],
-			small:    [ '481px',   '736px'  ],
-			xsmall:   [ '361px',   '480px'  ],
-			xxsmall:  [ null,      '360px'  ]
-		});
-
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
-
-	// Browser fixes.
-
-		// IE: Flexbox min-height bug.
-			if (browser.name == 'ie')
-				(function() {
-
-					var flexboxFixTimeoutId;
-
-					$window.on('resize.flexbox-fix', function() {
-
-						var $x = $('.fullscreen');
-
-						clearTimeout(flexboxFixTimeoutId);
-
-						flexboxFixTimeoutId = setTimeout(function() {
-
-							if ($x.prop('scrollHeight') > $window.height())
-								$x.css('height', 'auto');
-							else
-								$x.css('height', '100vh');
-
-						}, 250);
-
-					}).triggerHandler('resize.flexbox-fix');
-
-				})();
-
-		// Object fit workaround.
-			if (!browser.canUse('object-fit'))
-				(function() {
-
-					$('.banner .image, .spotlight .image').each(function() {
-
-						var $this = $(this),
-							$img = $this.children('img'),
-							positionClass = $this.parent().attr('class').match(/image-position-([a-z]+)/);
-
-						// Set image.
-							$this
-								.css('background-image', 'url("' + $img.attr('src') + '")')
-								.css('background-repeat', 'no-repeat')
-								.css('background-size', 'cover');
-
-						// Set position.
-							switch (positionClass.length > 1 ? positionClass[1] : '') {
-
-								case 'left':
-									$this.css('background-position', 'left');
-									break;
-
-								case 'right':
-									$this.css('background-position', 'right');
-									break;
-
-								default:
-								case 'center':
-									$this.css('background-position', 'center');
-									break;
-
-							}
-
-						// Hide original.
-							$img.css('opacity', '0');
-
-					});
-
-				})();
-
-	// Smooth scroll.
-		$('.smooth-scroll').scrolly();
-		$('.smooth-scroll-middle').scrolly({ anchor: 'middle' });
-
-	// Wrapper.
-		$wrapper.children()
-			.scrollex({
-				top:		'30vh',
-				bottom:		'30vh',
-				initialize:	function() {
-					$(this).addClass('is-inactive');
-				},
-				terminate:	function() {
-					$(this).removeClass('is-inactive');
-				},
-				enter:		function() {
-					$(this).removeClass('is-inactive');
-				},
-				leave:		function() {
-
-					var $this = $(this);
-
-					if ($this.hasClass('onscroll-bidirectional'))
-						$this.addClass('is-inactive');
-
-				}
-			});
-
-	// Items.
-		$('.items')
-			.scrollex({
-				top:		'30vh',
-				bottom:		'30vh',
-				delay:		50,
-				initialize:	function() {
-					$(this).addClass('is-inactive');
-				},
-				terminate:	function() {
-					$(this).removeClass('is-inactive');
-				},
-				enter:		function() {
-					$(this).removeClass('is-inactive');
-				},
-				leave:		function() {
-
-					var $this = $(this);
-
-					if ($this.hasClass('onscroll-bidirectional'))
-						$this.addClass('is-inactive');
-
-				}
-			})
-			.children()
-				.wrapInner('<div class="inner"></div>');
-
-	// Gallery.
-		$('.gallery')
-			.wrapInner('<div class="inner"></div>')
-			.prepend(browser.mobile ? '' : '<div class="forward"></div><div class="backward"></div>')
-			.scrollex({
-				top:		'30vh',
-				bottom:		'30vh',
-				delay:		50,
-				initialize:	function() {
-					$(this).addClass('is-inactive');
-				},
-				terminate:	function() {
-					$(this).removeClass('is-inactive');
-				},
-				enter:		function() {
-					$(this).removeClass('is-inactive');
-				},
-				leave:		function() {
-
-					var $this = $(this);
-
-					if ($this.hasClass('onscroll-bidirectional'))
-						$this.addClass('is-inactive');
-
-				}
-			})
-			.children('.inner')
-				//.css('overflow', 'hidden')
-				.css('overflow-y', browser.mobile ? 'visible' : 'hidden')
-				.css('overflow-x', browser.mobile ? 'scroll' : 'hidden')
-				.scrollLeft(0);
-
-		// Style #1.
-			// ...
-
-		// Style #2.
-			$('.gallery')
-				.on('wheel', '.inner', function(event) {
-
-					var	$this = $(this),
-						delta = (event.originalEvent.deltaX * 10);
-
-					// Cap delta.
-						if (delta > 0)
-							delta = Math.min(25, delta);
-						else if (delta < 0)
-							delta = Math.max(-25, delta);
-
-					// Scroll.
-						$this.scrollLeft( $this.scrollLeft() + delta );
-
-				})
-				.on('mouseenter', '.forward, .backward', function(event) {
-
-					var $this = $(this),
-						$inner = $this.siblings('.inner'),
-						direction = ($this.hasClass('forward') ? 1 : -1);
-
-					// Clear move interval.
-						clearInterval(this._gallery_moveIntervalId);
-
-					// Start interval.
-						this._gallery_moveIntervalId = setInterval(function() {
-							$inner.scrollLeft( $inner.scrollLeft() + (5 * direction) );
-						}, 10);
-
-				})
-				.on('mouseleave', '.forward, .backward', function(event) {
-
-					// Clear move interval.
-						clearInterval(this._gallery_moveIntervalId);
-
-				});
-
-		// Lightbox.
-			$('.gallery.lightbox')
-				.on('click', 'a', function(event) {
-
-					var $a = $(this),
-						$gallery = $a.parents('.gallery'),
-						$modal = $gallery.children('.modal'),
-						$modalImg = $modal.find('img'),
-						href = $a.attr('href');
-
-					// Not an image? Bail.
-						if (!href.match(/\.(jpg|gif|png|mp4)$/))
-							return;
-
-					// Prevent default.
-						event.preventDefault();
-						event.stopPropagation();
-
-					// Locked? Bail.
-						if ($modal[0]._locked)
-							return;
-
-					// Lock.
-						$modal[0]._locked = true;
-
-					// Set src.
-						$modalImg.attr('src', href);
-
-					// Set visible.
-						$modal.addClass('visible');
-
-					// Focus.
-						$modal.focus();
-
-					// Delay.
-						setTimeout(function() {
-
-							// Unlock.
-								$modal[0]._locked = false;
-
-						}, 600);
-
-				})
-				.on('click', '.modal', function(event) {
-
-					var $modal = $(this),
-						$modalImg = $modal.find('img');
-
-					// Locked? Bail.
-						if ($modal[0]._locked)
-							return;
-
-					// Already hidden? Bail.
-						if (!$modal.hasClass('visible'))
-							return;
-
-					// Lock.
-						$modal[0]._locked = true;
-
-					// Clear visible, loaded.
-						$modal
-							.removeClass('loaded')
-
-					// Delay.
-						setTimeout(function() {
-
-							$modal
-								.removeClass('visible')
-
-							setTimeout(function() {
-
-								// Clear src.
-									$modalImg.attr('src', '');
-
-								// Unlock.
-									$modal[0]._locked = false;
-
-								// Focus.
-									$body.focus();
-
-							}, 475);
-
-						}, 125);
-
-				})
-				.on('keypress', '.modal', function(event) {
-
-					var $modal = $(this);
-
-					// Escape? Hide modal.
-						if (event.keyCode == 27)
-							$modal.trigger('click');
-
-				})
-				.prepend('<div class="modal" tabIndex="-1"><div class="inner"><img src="" /></div></div>')
-					.find('img')
-						.on('load', function(event) {
-
-							var $modalImg = $(this),
-								$modal = $modalImg.parents('.modal');
-
-							setTimeout(function() {
-
-								// No longer visible? Bail.
-									if (!$modal.hasClass('visible'))
-										return;
-
-								// Set loaded.
-									$modal.addClass('loaded');
-
-							}, 275);
-
-						});
-
-})(jQuery);
+</body>
+</html>
