@@ -1,36 +1,3 @@
-<script>
-const music = document.getElementById("bgMusic");
-const btn = document.getElementById("musicBtn");
-
-// toggle play/pause
-let isPlaying = false;
-
-btn.addEventListener("click", () => {
-    if (!isPlaying) {
-        music.play();
-        btn.innerHTML = "🎵 Pause";
-        isPlaying = true;
-    } else {
-        music.pause();
-        btn.innerHTML = "🎵 Music";
-        isPlaying = false;
-    }
-});
-
-// hide button halfway down page
-window.addEventListener("scroll", () => {
-    const scrollY = window.scrollY;
-    const triggerPoint = window.innerHeight * 1.2; // ~half page
-
-    if (scrollY > triggerPoint) {
-        btn.style.opacity = "0";
-        btn.style.pointerEvents = "none";
-    } else {
-        btn.style.opacity = "1";
-        btn.style.pointerEvents = "auto";
-    }
-});
-</script>
 
 <!DOCTYPE HTML>
 <html>
