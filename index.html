@@ -9,10 +9,17 @@
     <link rel="stylesheet" href="william_rogero_clean.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- Google cursive font -->
+    <!-- Better modern professional font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Script font for poem -->
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap" rel="stylesheet">
 
     <style>
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
 
         html { scroll-behavior: smooth; }
 
@@ -76,19 +83,34 @@
             color:#111;
         }
 
+        /* Dark blue name */
+        #heroName {
+            font-size:3.5rem;
+            color:#0b3d91;
+            font-weight:600;
+        }
+
+        /* Lower + cleaner music button */
         .music-btn {
             position: fixed;
-            bottom: 25px;
+            bottom: 5px; /* LOWERED from 25px */
             right: 25px;
             padding: 12px 16px;
             border-radius: 999px;
             background: rgba(0,0,0,0.85);
             color:#fff;
             border:none;
+            cursor:pointer;
+            transition:0.2s;
+        }
+
+        .music-btn:hover {
+            transform: scale(1.05);
         }
 
     </style>
 </head>
+
 
 <body>
 
@@ -220,7 +242,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const music = document.getElementById("bgMusic");
     const btn = document.getElementById("musicBtn");
-    music.volume = 0.10;
+    music.volume = 0.07;
 
     let isPlaying = false;
 
